@@ -2,74 +2,58 @@
 
 ## Overview
 
-This project presents a deep learning approach for estimating real estate market values using artificial neural networks.
+A deep learning project for estimating real estate market values using artificial neural networks.
 
-The goal is to develop a regression model that learns the relationship between property characteristics and market prices, enabling automated property valuation based on historical real estate data.
-
----
-
-## Objective
-
-The objective of this project is to build and evaluate a Multi Layer Perceptron (MLP) neural network capable of predicting property prices using relevant real estate features.
+The system collects real estate listing data, processes property features, and trains a neural network model to predict property prices.
 
 ---
 
 ## Dataset
 
-The dataset contains real estate listings with information about:
+The dataset was created by collecting real estate listings and extracting relevant property information.
+
+Features include:
 
 - Location
-- Property area
+- Area size
 - Number of rooms
 - Number of bathrooms
-- Floor level
-- Elevator availability
-- Balcony and terrace features
+- Floor
+- Elevator
+- Balcony and terrace
 - Heating type
-- Additional property characteristics
+- Property characteristics
 
 Target variable:
 
-- `price_eur` — property market value in euros
+- `price_eur`
 
 ---
 
-## Model Architecture
+## Model
 
 The project uses a Multi Layer Perceptron (MLP) neural network for regression.
 
 Architecture:
 
-- Input layer
-- Dense layer: 64 neurons with ReLU activation
+- Dense layer: 64 neurons (ReLU)
 - Dropout layer: 0.2
-- Dense layer: 32 neurons with ReLU activation
-- Output layer: 1 neuron with Linear activation
+- Dense layer: 32 neurons (ReLU)
+- Output layer: 1 neuron (Linear)
 
-Training configuration:
+Training:
 
 - Optimizer: Adam
 - Loss function: Mean Squared Error (MSE)
 
 ---
 
-## Data Processing
-
-The preprocessing pipeline includes:
-
-- Handling missing values
-- Encoding categorical variables
-- Feature scaling
-- Train/test data splitting
-
----
-
 ## Evaluation
 
-The model performance is evaluated using regression metrics:
+The model is evaluated using:
 
-- Mean Absolute Error (MAE)
-- Root Mean Squared Error (RMSE)
+- MAE
+- RMSE
 - R² Score
 
 ---
@@ -85,13 +69,6 @@ The model performance is evaluated using regression metrics:
 
 ---
 
-## Practical Application
+## Application
 
-The developed system can be used as a decision-support tool for:
-
-- Real estate agencies
-- Buyers and sellers
-- Property investors
-- Market analysis platforms
-
-The project demonstrates the practical application of neural networks in automated real estate valuation.
+The system can support automated property valuation and real estate market analysis by providing estimated property prices based on historical data.
