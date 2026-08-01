@@ -1,10 +1,10 @@
-# Real Estate Valuation Using Neural Networks
+# Real Estate Price Prediction Using Machine Learning
 
 ## Overview
 
-A deep learning project for estimating real estate market values using artificial neural networks.
+A machine learning project for estimating real estate market prices.
 
-The system collects real estate listing data, processes property features, and trains a neural network model to predict property prices.
+The system collects real estate listing data, processes property features, and trains and compares several regression algorithms to predict property prices, in order to determine which approach performs best on this dataset.
 
 ---
 
@@ -14,61 +14,61 @@ The dataset was created by collecting real estate listings and extracting releva
 
 Features include:
 
-- Location
+- Location (municipality, neighborhood, distance from city center)
 - Area size
-- Number of rooms
-- Number of bathrooms
+- Number of rooms and bathrooms
 - Floor
-- Elevator
-- Balcony and terrace
+- Elevator, balcony, terrace
 - Heating type
-- Property characteristics
+- Other property characteristics
 
 Target variable:
 
-- `price_eur`
+- `price_eur` (log-transformed for training)
 
 ---
 
-## Model
+## Models
 
-The project uses a Multi Layer Perceptron (MLP) neural network for regression.
+The project trains and compares the following regression algorithms:
 
-Architecture:
+- Linear Regression
+- Decision Tree
+- Random Forest
+- XGBoost
+- CatBoost
+- LightGBM
+- Multi Layer Perceptron (MLP) neural network
 
-- Dense layer: 64 neurons (ReLU)
-- Dropout layer: 0.2
-- Dense layer: 32 neurons (ReLU)
-- Output layer: 1 neuron (Linear)
-
-Training:
-
-- Optimizer: Adam
-- Loss function: Mean Squared Error (MSE)
+All models use the same preprocessing pipeline, train/test split, and cross-validation folds, to ensure a fair comparison.
 
 ---
 
 ## Evaluation
 
-The model is evaluated using:
+Models are evaluated using:
 
 - MAE
 - RMSE
+- MAPE
 - R² Score
+
+Model performance is compared through cross-validation, statistical significance testing, residual analysis, and feature importance / SHAP analysis.
 
 ---
 
 ## Technologies
 
 - Python
-- TensorFlow / Keras
-- Pandas
-- NumPy
 - Scikit-learn
-- Matplotlib
+- XGBoost, LightGBM, CatBoost
+- TensorFlow / Keras
+- SHAP
+- Pandas, NumPy
+- Matplotlib, Seaborn
 
 ---
 
 ## Application
 
-The system can support automated property valuation and real estate market analysis by providing estimated property prices based on historical data.
+The system can support automated property valuation and real estate market analysis by providing estimated property prices based on historical listing data.
