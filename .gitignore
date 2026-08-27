@@ -17,6 +17,11 @@ venv/
 # Models
 models/checkpoints/*
 models/saved/*
+models/figures/*
+!models/figures/.gitkeep
+models/artifacts/*
+!models/artifacts/.gitkeep
+catboost_info/
 *.h5
 *.pkl
 *.pt
